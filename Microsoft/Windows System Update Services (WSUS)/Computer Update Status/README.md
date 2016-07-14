@@ -15,8 +15,7 @@ Where Action = 'Install' and [SUSDB].[PUBLIC_VIEWS].[vComputerTarget].[Name] lik
 if we only wanted to see which updates were not installed, all we'd need to do is the following.  By adding "state !=4" we're saying only show updates that are applicable, and not currently installed.
 Where Action = 'Install' and [SUSDB].[PUBLIC_VIEWS].[vComputerTarget].[Name] like 'computername%' and state != 1 and state != 4
 
-Maybe you want to see the update status of the computer in general, reguardless of whether and update was approved or not.  This would be similar to standard WSUS report.  ***WARNING, big query, takes a long time, be patient
-Where [SUSDB].[PUBLIC_VIEWS].[vComputerTarget].[Name] like 'computername%' and state != 1
+
 
 
 
