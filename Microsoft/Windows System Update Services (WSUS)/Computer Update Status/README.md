@@ -9,7 +9,7 @@ Let's go over a few way's to filter data.  First, the computer name column would
 
 Right now, I'm only showing updates that are approved to be installed.  That is accomplished by the Where Action = 'Install' statement.  
 
-The "state" column is one that can quicly let you get down to the the update status you care about.  In the case of the one below, we're showing the update status for a computer called "computername", but not showing non-applicable updates.  
+The "state" column is one that can quickly let you get down to the the update status you care about.  In the case of the one below, we're showing the update status for a computer called "computername", but not showing non-applicable updates.  
 Where Action = 'Install' and [SUSDB].[PUBLIC_VIEWS].[vComputerTarget].[Name] like 'computername%' and state != 1 
 
 if we only wanted to see which updates were not installed, all we'd need to do is the following.  By adding "state !=4" we're saying only show updates that are applicable, and not currently installed.
